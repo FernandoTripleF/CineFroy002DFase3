@@ -1,0 +1,14 @@
+{%extends "base_generic.html%}
+
+{%block content%}
+
+<h1>Eliminar Cliente</h1>
+
+<p>Desea eliminar al cliente: {{cliente}} ?</p>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" action="" value="Delete">
+</form>
+
+{%endblock%}
