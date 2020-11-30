@@ -45,3 +45,13 @@ $(function()
             }//messages
         }); //$('#mi-formulario').validate
     }); //function
+
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
+
+      $(function () {
+        $('.example-popover').popover({
+          container: 'body'
+        })
+      })

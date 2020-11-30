@@ -11,13 +11,21 @@
 {% block content %}
 <body>
   <main role="main">
+    
 
     <hr class="featurette-divider">
     <div class="container" style= "color: #353333">
       <h1 class="cover-heading">Bienvenidos a Cine Froy &#127909; &#127871;</h1>
       <p class="lead">Disfruta de nuestras seleccion especial de esta semana!, No te lo puedes perder invita a tus amigos!</p>
       <hr class="featurette-divider">
+      {% if user.is_authenticated  %}{% if user.is_staff %}
+
+    <a class="btn btn-primary" href="{% url 'pelicula_create' %}" style="float: right; font-size: 14px;">Agregar Pelicula <span class="glyphicon glyphicon-plus"></span></a>
+    
+  
+    {% else %}{% endif %}{% else %}{% endif %}
         <div class="row">
+         
 
 
         <div class="card" style="width: 17rem;">
@@ -26,7 +34,6 @@
             <h5 class="card-title">La monja</h5>
             <p class="card-text"> 2018 ‧ Terror/Suspenso ‧ 1h 36mm</p>
             <p class="card-text">Director: Corin Hardi</p>
-            <a href="index4.html" class="btn btn-primary">Comprar</a>
             <a href="https://www.youtube.com/watch?v=AKpPeLAMY9I" class="btn btn-primary">Trailer</a>
           </div>
         </div>
@@ -39,7 +46,7 @@
             <h5 class="card-title">Son como niños 2</h5>
             <p class="card-text"> 2013 ‧ Comedia ‧ 1h 41m</p>
             <p class="card-text">Director: Dennis Dugan</p>
-            <a href="index4.html" class="btn btn-primary">Comprar</a>
+            
             <a href="https://www.youtube.com/watch?v=EJlI-peYPVs" class="btn btn-primary">Trailer</a>
           </div>
         </div>
@@ -52,7 +59,7 @@
             <h5 class="card-title">Titanic</h5>
             <p class="card-text"> Drama/Romance ‧ 1997 ‧ 3h 30min.</p>
             <p class="card-text">Director: James Cameron</p>
-            <a href="index4.html" class="btn btn-primary">Comprar</a>
+            
             <a href="https://www.youtube.com/watch?v=2e-eXJ6HgkQ" class="btn btn-primary">Trailer</a>
           </div>
         </div>
@@ -65,7 +72,7 @@
             <h5 class="card-title">Siempre a tu lado</h5>
             <p class="card-text"> Drama/Infantil ‧ 2009 ‧ 1h 33min.</p>
             <p class="card-text">Director: Lasse Hallström</p>
-            <a href="index4.html" class="btn btn-primary">Comprar</a>
+            
             <a href="https://www.youtube.com/watch?v=pypFfRYMgvM" class="btn btn-primary">Trailer</a>
           </div>
         </div>
@@ -78,7 +85,7 @@
             <h5 class="card-title">Bloodshot</h5>
             <p class="card-text"> 2020 ‧ Acción/Aventura ‧ 1h 49m</p>
             <p class="card-text">Director:  David S. F. Wilson</p>
-            <a href="index4.html" class="btn btn-primary">Comprar</a>
+            
             <a href="https://www.youtube.com/watch?v=zOeEPSR2OSM" class="btn btn-primary">Trailer</a>
           </div>
         </div>
@@ -91,7 +98,7 @@
             <h5 class="card-title">Star Wars</h5>
             <p class="card-text"> 2015 ‧ Acción/Ciencia ficción ‧ 2h 15m</p>
             <p class="card-text">Director: J. J. Abrams</p>
-            <a href="index4.html" class="btn btn-primary">Comprar</a>
+           
             <a href="https://www.youtube.com/watch?v=gdh4iyWBAj0" class="btn btn-primary">Trailer</a>
           </div>
         </div>
@@ -104,7 +111,7 @@
             <h5 class="card-title">Ang Lee</h5>
             <p class="card-text"> 2019 ‧ Acción/Ciencia ficción ‧ 1h 57m</p>
             <p class="card-text">Director: Lasse Hallström</p>
-            <a href="index4.html" class="btn btn-primary">Comprar</a>
+           
             <a href="https://www.youtube.com/watch?v=6OONW4k1izs" class="btn btn-primary">Trailer</a>
           </div>
         </div>
@@ -117,7 +124,7 @@
             <h5 class="card-title">Malos tiempos</h5>
             <p class="card-text"> 2018 ‧ Misterio/Suspenso ‧ 2h 20m</p>
             <p class="card-text">Director: Drew Dorggard</p>
-            <a href="index4.html" class="btn btn-primary">Comprar</a>
+           
             <a href="https://www.youtube.com/watch?v=6AU-TIONmHw" class="btn btn-primary">Trailer</a>
           </div>
         </div>
@@ -130,7 +137,7 @@
             <h5 class="card-title">Batle Angel</h5>
             <p class="card-text"> 2019 ‧ Acción/Ciencia ficción ‧ 2h 2m.</p>
             <p class="card-text">Director: Robert Rodríguez</p>
-            <a href="index4.html" class="btn btn-primary">Comprar</a>
+            
             <a href="https://www.youtube.com/watch?v=HZpDuRzr_Xk" class="btn btn-primary">Trailer</a>
           </div>
         </div>
@@ -143,7 +150,7 @@
             <h5 class="card-title">Forest Gump</h5>
             <p class="card-text"> 1994 ‧ Romance/Drama ‧ 2h 22m</p>
             <p class="card-text">Director: Robert Zemeckis</p>
-            <a href="index4.html" class="btn btn-primary">Comprar</a>
+            
             <a href="https://www.youtube.com/watch?v=Cyh1LpxnaxI" class="btn btn-primary">Trailer</a>
           </div>
         </div>
@@ -156,7 +163,7 @@
             <h5 class="card-title">El exorcista</h5>
             <p class="card-text"> 1973 ‧ Terror/Sobrenatural ‧ 2h 12m</p>
             <p class="card-text">Director: William Friedkin</p>
-            <a href="index4.html" class="btn btn-primary">Comprar</a>
+            
             <a href="https://www.youtube.com/watch?v=7iCJssW8XiI" class="btn btn-primary">Trailer</a>
           </div>
         </div>
@@ -169,7 +176,7 @@
             <h5 class="card-title">El club de la pelea</h5>
             <p class="card-text"> 1999 ‧ Drama/Suspenso ‧ 2h 31m.</p>
             <p class="card-text">Director: David Fincher</p>
-            <a href="index4.html" class="btn btn-primary">Comprar</a>
+            
             <a href="https://www.youtube.com/watch?v=R7aiJtcJ0AQ" class="btn btn-primary">Trailer</a>
           </div>
         </div>

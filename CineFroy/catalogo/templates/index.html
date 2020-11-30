@@ -101,6 +101,12 @@
           <img class="d-block w-100" src="{% static 'img/doctor.jpg' %}" width="200" height="400" alt="">
                </div>
       </div>
+      {% if user.is_authenticated  %}{% if user.is_staff %}
+
+          <a class="btn btn-primary" href="{% url 'cliente_create' %}" style="float: right; font-size: 14px;">Agregar Cliente <span class="glyphicon glyphicon-plus"></span></a>
+          <!--=======aqui codigo=======-->
+        
+          {% else %}{% endif %}{% else %}{% endif %}
       
 
   </main>

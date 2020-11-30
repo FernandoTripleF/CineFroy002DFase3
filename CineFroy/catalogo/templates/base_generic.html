@@ -9,6 +9,7 @@
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+  <script src="{% static 'js/metodos.js' %}"></script>
 </head>
 
   <body>
@@ -33,7 +34,7 @@
       </ul>
       {% if user.is_authenticated  %}
         {% if user.is_staff %}
-        <a class="nav-item "><a href="admin" style="color: white"class="nav-link"><strong>Administracion</strong></a>
+        <a class="nav-item "><a href="/admin" style="color: white"class="nav-link"><strong>Administracion</strong></a>
         {% endif %}
           
             <a class="nav-link" style="color: white;" href="{% url 'logout' %}"> <strong>Cerrar sesión </strong></a>  
