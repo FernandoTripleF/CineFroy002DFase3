@@ -2,14 +2,30 @@
 
 
 {% block content %}
-<h1>Local Library Home</h1>
-
-  <p>Welcome to <em>LocalLibrary</em>, Django website </p>
-
-  <h2>Login</h2>
-  <form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-  </form>
+  <br>
+  <div class="text-center mb-4">
+    <h2>Registrar</h2>
+  </div>
+  <div class="container mx-auto" style="width: 440px;">
+      <form method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="row">
+            <div class="container-fluid mt-2 mb-2">
+                  <span class="row">
+                    {{ field.errors }}
+                      <label class="col" for="{{ field.id_for_label }}">{{ field.label }}:</label>
+                    {{ field }}
+                  </span>
+                <div>
+                  {{ field.help_text }}
+                </div>
+            </div>
+        </div>
+        <br>
+        {% endfor %}
+        <button class="btn btn-block btn-success" type="submit">Registrar</button>
+        </div>
+      </form>
+  </div>
 {% endblock %}
