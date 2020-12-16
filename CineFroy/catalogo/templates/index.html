@@ -28,7 +28,7 @@
             </div>
           </div>
         </div>
-  
+
         <div class="carousel-item">
           <img class="d-block w-100" src="{% static 'img/estacion.jpg' %}" alt="">
           <div class="container">
@@ -59,15 +59,15 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-  
+
     <div class="container marketing">
-  
+
       <h1 class="cover-heading">Bienvenidos a Cine Froy &#127909; &#127871;</h1>
       <p class="lead">No te puedes perder esta oportunidad de ver tus peliculas favoritas en nuestros espacios de Cine Froy. Tenemos una variedad exclusiva de las peliculas mas taquilleras, en estreno y las mas galardonadas! Hecha un vistazo a la cartelera, podras ver los trailers de todas y comprar tu boleto online. Si quieres ser parte de nuestra familia Froy llena el formulario y te contactaremos.</p>
-  
-  
+
+
       <hr class="featurette-divider">
-  
+
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">Venom II <span class="text-muted"> , te dejará boquiabierto!</span></h2>
@@ -77,9 +77,9 @@
         <img class="d-block w-100" src="{% static 'img/venom.jpg' %}" width="200" height="500" alt="">
         </div>
       </div>
-  
+
       <hr class="featurette-divider">
-  
+
       <div class="row featurette">
         <div class="col-md-7 order-md-2">
           <h2 class="featurette-heading">La maldicion<span class="text-muted">, no te lo pierdas!</span></h2>
@@ -89,9 +89,9 @@
           <img class="d-block w-100" src="{% static 'img/maldicion.jpg' %}" width="200" height="500" alt="">
                 </div>
       </div>
-  
+
       <hr class="featurette-divider">
-  
+
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">Doctor Dolittle <span class="text-muted">, mira esto!.</span></h2>
@@ -103,11 +103,12 @@
       </div>
       {% if user.is_authenticated  %}{% if user.is_staff %}
 
-          <a class="btn btn-primary" href="{% url 'cliente_create' %}" style="float: right; font-size: 14px;">Agregar Cliente <span class="glyphicon glyphicon-plus"></span></a>
+          <br>
+          <a class="btn  btn-block btn-primary" href="{% url 'cliente_create' %}" style="float: right; font-size: 14px;">Agregar Cliente <span class="glyphicon glyphicon-plus"></span></a>
           <!--=======aqui codigo=======-->
-        
+
           {% else %}{% endif %}{% else %}{% endif %}
-      
+
 
   </main>
 {% endblock %}

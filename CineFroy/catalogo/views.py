@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from . models import Pelicula, Cliente, Genero
 from django.views import generic
-from django.views.generic.edit import FormView 
+from django.views.generic.edit import FormView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
@@ -19,12 +19,12 @@ def index(request):
     )
 
 def cartelera(request):
-    num_Pelis = Pelicula.objects.all().count()
+    Pelis = Pelicula.objects.all()
 
     return render(
         request,
          'cartelera.html',
-        context={'num_Pelis': num_Pelis},
+        context={'Pelis': Pelis},
     )
 
 def formulario(request):
@@ -38,7 +38,15 @@ def formulario(request):
 class ClienteCreate(CreateView):
     model = Cliente
     fields = '__all__'
-    
+
+    def get_success_url(self):
+    # find your next url here
+
+        next_url = self.request.POST.get('next',None) # here method should be GET or POST.
+        if next_url:
+            return "%s" % (next_url) # you can include some query strings as well
+        else :
+            return reverse_lazy('index') # what url you wish to return
 
 class ClienteUpdate(UpdateView):
     model = Cliente
@@ -65,7 +73,7 @@ class PeliculaCreate(CreateView):
         else :
             return reverse_lazy('index') # what url you wish to return
 
-    
+
 class PeliculaUpdate(UpdateView):
     model = Pelicula
     fields = '__all__'
@@ -77,5 +85,5 @@ class PeliculaDelete(DeleteView):
 class PeliculaDetailView(generic.DetailView):
     model = Pelicula
 
-        
+
 

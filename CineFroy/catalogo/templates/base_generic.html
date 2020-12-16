@@ -36,20 +36,20 @@
         {% if user.is_staff %}
         <a class="nav-item "><a href="/admin" style="color: white"class="nav-link"><strong>Administracion</strong></a>
         {% endif %}
-          
-            <a class="nav-link" style="color: white;" href="{% url 'logout' %}"> <strong>Cerrar sesión </strong></a>  
+
+            <a class="nav-link" style="color: white;" href="{% url 'logout' %}"> <strong>Cerrar sesión </strong></a>
 
           {% else %}
-         
+
             <a class="nav-link" style="color: white;" href="{% url 'login' %}"> <strong>Ingresar</strong> </a>
-            <a class="nav-link" style="color: white;" href="{% url 'signup' %}"> <strong>Registrarse</strong> </a>    
+            <a class="nav-link" style="color: white;" href="{% url 'signup' %}"> <strong>Registrarse</strong> </a>
 
           {% endif %}
     </div>
   </nav>
 </header>
 {% block content %}{% endblock %}
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br>
   <footer class="container">
     <p class="float-right"><a href="#">Volver hacia arriba</a></p>
     <p>&copy; 2017-2020 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>

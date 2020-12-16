@@ -4,14 +4,15 @@
 
 <div class="container">
   <center>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
 {% if user.is_authenticated %}
   <h3>Hola! Sr./a {{ user.username }} usted se encuentra logeado correctamente!!</h3>
- 
+
 {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">Login</a>
 </center>
 </div>
 {% endif %}
+<br><br><br><br>
 {% endblock %}

@@ -1,5 +1,5 @@
 from django.db import models
-from django.urls import reverse 
+from django.urls import reverse
 import uuid
 
 # Create your models here.
@@ -14,6 +14,8 @@ class Pelicula(models.Model):
     nombre=models.CharField(max_length=200)
     genero=models.ForeignKey(Genero, on_delete=models.CASCADE, null=True)
     descripcion=models.CharField(max_length=200, null=True)
+    director=models.CharField(max_length=200, null=True)
+    trailer=models.CharField(max_length=200, null=True)
     image = models.ImageField(upload_to='pelis', blank=True, null=True)
     precio = models.IntegerField(null=True)
 
